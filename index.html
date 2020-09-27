@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <title>I love Coffee</title>
+</head>
+
+<body id="cafe">
+
+    <section>
+
+        <form class="form-container col-md-6 col-md-offset-6 float-left">
+            <div class="topo-formulario row justify-content-center">
+                <img id="logo-img" class="pulse" src="/img/logowhite.png" alt="">
+                <a id="meu-linkedin" class="pulse" href="https://www.linkedin.com/in/marcus-garcia-81b529140/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="form-group">
+                <p class="subtitulo">Dados da Última Compra</p>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="valor de compra">Valor</label>
+                        <input type="tel" class="form-control" id="vr-compra" placeholder="R$ 0,00"
+                            onkeyup="formatarMoeda();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()">
+                        <small id="inf-vr-cafe" class="form-text text-muted">Valor Unitário</small>
+                    </div>
+                    <div class="col">
+                        <label for="medida da embalagem">Embalagem</label>
+                        <select id="gr-compra" class="form-control"
+                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()">
+                            <option selected disabled>Pacotes c...</option>
+                            <option value="250"> 250g</option>
+                            <option value="500"> 500g</option>
+                            <option value="1000">1,0kg</option>
+                            <option value="1500">1,5kg</option>
+                            <option value="2000">2,0kg</option>
+                            <option value="2500">2,5kg</option>
+                            <option value="3000">3,0kg</option>
+                            <option value="4000">4,0kg</option>
+                            <option value="4500">4,5kg</option>
+                            <option value="5000">5,0kg</option>
+                        </select>
+                        <small id="inf-g-cafe" class="form-text text-muted">Medida da
+                            Embalagem</small>
+                    </div>
+                </div>
+                <p class="subtitulo">Meu Preparo</p>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label for="Quantidade de colheres">Medida</label>
+                        <input type="number" min="0" class="form-control" id="un-colheres" placeholder="colheres"
+                            onclick="feedCafe();feedAgua();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                            id="inf-quant-cafe">
+                        <small class="form-text text-muted">colheres de sopa cheias</small>
+                    </div>
+                    <div class="col">
+                        <label for="Porção de café">café</label>
+                        <input type="" class="form-control" id="cons-cafe" placeholder="Consumo gramas" readonly
+                            id="inf-fab-cafe">
+                        <small class="form-text text-muted">Cosumo da medida informada</small>
+                    </div>
+                    <div class="col">
+                        <label for="Quantidade de água">água</label>
+                        <input type="" class="form-control" id="cons-agua" placeholder="Consumo mililitros" readonly>
+                        <small id="inf-vol-agua" class="form-text text-muted">Cosumo da medida informada</small>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="col">
+                        <label for="Número de preparos por dia">Porções Diárias</label>
+                        <input type="number" min="0" class="form-control" id="por-dia"
+                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                            placeholder="">
+                    </div>
+                    <div class="col">
+                        <label for="dias de preparo">Dias de Preparo</label>
+                        <input type="number" min="0" class="form-control" id="por-mes"
+                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                            placeholder="">
+                    </div>
+                </div>
+
+
+                <p class="subtitulo">Meu Consumo</p>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="consumo proporcional em R$">Consumo R$</label>
+                        <input type="number" min="0" class="form-control" id="real-porcao" placeholder="" readonly>
+                        <small id="inf-real-cafe" class="form-text text-muted">Conforme suas
+                            informações</small>
+                    </div>
+                    <div class="col">
+                        <label for="consumo proporcional em gramas">Consumo g</label>
+                        <input type="number" min="0" class="form-control" id="grama-porcao" placeholder="" readonly>
+                        <small id="inf-cons-cafe" class="informativo form-text text-muted">Conforme suas
+                            informações</small>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-5 float-right">
+                <div id="graficoPizza" class="graficos"></div>
+            </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!--JS Google Chart  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- Meu JS -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
+
+<!-- <section id="graficoPizza" class="graficos col-12 col sm-7 col-md-5"></section>-->

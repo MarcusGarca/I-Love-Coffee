@@ -1,0 +1,127 @@
+body {
+  background: url('/img/IMG_0587_red.JPG') no-repeat;
+  opacity: 0.8;
+  background-position-x: right;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: 100% 200vh;
+    background-position-x: right;
+    margin-right: 10px;
+  }
+
+}
+
+#logo-img {
+  margin-left: 5px;
+}
+
+form {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+p {
+  background-color: #4b3621;
+  opacity: 0.7;
+  color: blanchedalmond;
+}
+
+label {
+  background-color: #4b3621;
+  opacity: 0.7;
+  color: blanchedalmond;
+}
+
+.subtitulo {
+  padding-top: 10px;
+  color: yellow;
+  font-weight: bolder;
+
+}
+
+.form-container {
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: #4b3621;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px black;
+  margin-bottom: 10px;
+
+}
+
+.graficos {
+  padding: 1px;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px 0px black;
+  opacity: 0.6;
+  background-color: white;
+}
+
+.nova-small {
+  color: white;
+  font-weight: bolder;
+  color: orange;
+
+}
+
+
+.pulse {
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  display: table;
+  margin-top: 10px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+
+  100% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+}
+
+#meu-linkedin {
+
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  right: 30px;
+  margin-right: 10px;
+  background-color: #0073b1;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  z-index: 1000;
+  opacity: 0.8;
+}
+
+i {
+  margin-top: 15px
+}
