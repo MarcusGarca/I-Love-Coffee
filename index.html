@@ -38,7 +38,7 @@
                     <div class="col">
                         <label for="medida da embalagem">Embalagem</label>
                         <select id="gr-compra" class="form-control"
-                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()">
+                        onkeyup="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()">
                             <option selected disabled>Pacotes c...</option>
                             <option value="250"> 250g</option>
                             <option value="500"> 500g</option>
@@ -61,7 +61,7 @@
                     <div class="col">
                         <label for="Quantidade de colheres">Medida</label>
                         <input type="number" min="0" class="form-control" id="un-colheres" placeholder="colheres"
-                            onclick="feedCafe();feedAgua();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onkeyup="feedCafe();feedAgua();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             id="inf-quant-cafe">
                         <small class="form-text text-muted">colheres de sopa cheias</small>
                     </div>
@@ -83,13 +83,13 @@
                     <div class="col">
                         <label for="Número de preparos por dia">Porções Diárias</label>
                         <input type="number" min="0" class="form-control" id="por-dia"
-                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onkeyup="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             placeholder="">
                     </div>
                     <div class="col">
                         <label for="dias de preparo">Dias de Preparo</label>
                         <input type="number" min="0" class="form-control" id="por-mes"
-                            onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onkeyup="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             placeholder="">
                     </div>
                 </div>
