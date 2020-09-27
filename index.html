@@ -62,6 +62,7 @@
                         <label for="Quantidade de colheres">Medida</label>
                         <input type="number" min="0" class="form-control" id="un-colheres" placeholder="colheres"
                         onkeyup="feedCafe();feedAgua();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onclick="feedCafe();feedAgua();feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             id="inf-quant-cafe">
                         <small class="form-text text-muted">colheres de sopa cheias</small>
                     </div>
@@ -84,12 +85,14 @@
                         <label for="Número de preparos por dia">Porções Diárias</label>
                         <input type="number" min="0" class="form-control" id="por-dia"
                         onkeyup="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             placeholder="">
                     </div>
                     <div class="col">
                         <label for="dias de preparo">Dias de Preparo</label>
                         <input type="number" min="0" class="form-control" id="por-mes"
                         onkeyup="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
+                        onclick="feedConsumoReal();feedConsumoGrama();desenharPizza();alterarSmall()"
                             placeholder="">
                     </div>
                 </div>

@@ -112,7 +112,7 @@ function desenharPizza() {
     tabela.addRows([
 
         ['Consumo', consumoGrama()],
-        ['Sua Embalagem', dispensa()]
+        ['Minha Embalagem', dispensa()]
     ]);
 
     var opcoes = {
